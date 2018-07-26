@@ -26,18 +26,30 @@ Continuous deployment is an excellent way to accelerate the feedback loop with y
 
 At Power, it is common to refer to Jenkins as our "CI", but "CI/CD" is a more complete description. Moving forward, these lessons will refer to Jenkins simply as Nitro's CI.
 
-Jenkins is integrated with Nitro through [Github Webhooks](https://help.github.com/articles/about-webhooks/), just like Codeclimate. Anytime one adds a commit to a pull request against the `nitro-web` repo, it triggers a CI run. Once Jenkins has finished, it displays the result of the run right in Github:
+Jenkins is integrated with Nitro through [Github Webhooks](https://help.github.com/articles/about-webhooks/), just like Codeclimate. Anytime one adds a commit to a pull request on the `nitro-web` repo, it triggers a CI run. Once Jenkins has finished, it displays the result of the run right in Github:
 
 ![Successful CI Run](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Green-CI-Run.png?raw=true "Successful CI Run")
 
-### So what does Jenkins do for us?
+### What does Jenkins do for Nitro?
 
 For a new commit on a `nitro-web` Pull Request, Jenkins will initialize Nitro's environment, install dependencies, build & test the application, and then remove all the extra files and configuration created to make the early steps execute. In the old Jenkins UI, that looks like this:
 
 ![PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/PR-9136-Old-Jenkins-UI.png?raw=true "PR Build")
 
+In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Cleanup` are called CI stages. For a **PR** build, the `Deploy` stage is skipped over. Only builds on `nitro-web`'s master branch will automatically deploy.
+
+Just looking at the stages themselves does not reveal very much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. In Blue Ocean, the same PR build will looks like this:
+
+![Blue Ocean PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Build-View-in-Blue-Ocean.png?raw=true "Blue Ocean PR Build")
+
+Here, one can see that the `Deploy` stage is skipped because the corresponding node is empty. One can also see many of the individual processes happening during the `Dependencies` and `Build` stages. If you click on one of green nodes and scroll down to the bottom of the page, you have access to another break down of the data. Here is what clicking on the "Overcommit" node displays.
+
+![Blue Ocean Bottom of PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Overview-in-Blue-Ocean.png?raw=true "Blue Ocean Bottom of PR Build")
 
 
+
+
+In each stage, a number of processes will execute. To
 
 wip...
 
