@@ -1,5 +1,7 @@
 # Jenkins
 
+![Jenkins Logo](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Jenkins-Logo.png?raw=true "Jenkins Logo")
+
 [Jenkins](https://github.com/jenkinsci/jenkins) is an open source continuous integration, continuous deployment software that can be used to automate building, testing, and deploying software. Power uses it for all of these purposes, and it enables us to update Nitro continuously throughout the day.
 
 ## Continuous Integration
@@ -38,15 +40,19 @@ For a new commit on a `nitro-web` Pull Request, Jenkins will initialize Nitro's 
 
 In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Cleanup` are called CI stages. For a **PR** build, the `Deploy` stage is skipped over. Only builds on `nitro-web`'s master branch will automatically deploy.
 
-Just looking at the stages themselves does not reveal very much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. In Blue Ocean, the same PR build will looks like this:
+### Digging deeper with Blue Ocean
+
+Just looking at the stages themselves does not reveal much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. In Blue Ocean, the same PR build will looks like this:
 
 ![Blue Ocean PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Build-View-in-Blue-Ocean.png?raw=true "Blue Ocean PR Build")
 
-Here, one can see that the `Deploy` stage is skipped because the corresponding node is empty. One can also see many of the individual processes happening during the `Dependencies` and `Build` stages. If you click on one of green nodes and scroll down to the bottom of the page, you have access to another break down of the data. Here is what clicking on the "Overcommit" node displays.
+Here, one can see that the `Deploy` stage is skipped because the corresponding node is empty. One can also see many of the individual processes that happen during the `Dependencies` and `Build` stages. If you click on a green node and scroll down to the bottom of the page, you will have access to another break down of the data. Here is what clicking on the "Overcommit" node displays.
 
 ![Blue Ocean Bottom of PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Overview-in-Blue-Ocean.png?raw=true "Blue Ocean Bottom of PR Build")
 
+The "Overcommit" process is broken down into for sections of logs. On the far right of each line, you can see how long each section took. Reveiwing that image above shows that most of the work happened in a section simply titled "false". Clicking on that line of text will reveal even more info.
 
+![Blue Ocean Overcommit Logs](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Logs.png?raw=true "Blue Ocean Overcommit Logs")
 
 
 In each stage, a number of processes will execute. To
