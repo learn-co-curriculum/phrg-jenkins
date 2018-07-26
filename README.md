@@ -58,5 +58,11 @@ The "Overcommit" process is broken down into for sections of logs. On the far ri
 
 ![Blue Ocean Overcommit Logs](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Logs.png?raw=true "Blue Ocean Overcommit Logs")
 
+### The complete picture
 
-As Nitro grows, the answer to the question can vary. To get a full picture of our [Jenkin's pipeline](https://jenkins.io/doc/book/pipeline/), check out the `Jenkinsfile` located on the root of `nitro-web`. This file is written in [Groovy](http://groovy-lang.org/), a Java-syntax-compatible object-oriented programming language that was modeled off of features in Ruby. (There is even a [Groovy on Grails](https://grails.org/) Java framework that models `Ruby on Rails`).
+To get a full scoop on how Jenkins works for Nitro, our ["Jenkin's Pipeline"](https://jenkins.io/doc/book/pipeline/) is defined in the `Jenkinsfile` located on the root of `nitro-web`. This file is written in [Groovy](http://groovy-lang.org/), a Java-syntax-compatible object-oriented programming language that was modeled off of features in Ruby. (There is even a [Groovy on Grails](https://grails.org/) Java framework that models `Ruby on Rails`).
+
+## Resources
+
+- [Article on CI & CD](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd)
+- [Jenkins Docs](https://jenkins.io/doc/)
