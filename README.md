@@ -42,7 +42,11 @@ In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Clea
 
 ### Digging deeper with Blue Ocean
 
-Just looking at the stages themselves does not reveal much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. In Blue Ocean, the same PR build will looks like this:
+Just looking at the stages themselves does not reveal much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. As you might guess, most of the views in Blue Ocean are blue :)
+
+![Blue Ocean UI](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Blue-Ocean-UI.png?raw=true "Blue Ocean UI")
+
+In Blue Ocean, the same PR build will looks like this:
 
 ![Blue Ocean PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Build-View-in-Blue-Ocean.png?raw=true "Blue Ocean PR Build")
 
@@ -54,9 +58,5 @@ The "Overcommit" process is broken down into for sections of logs. On the far ri
 
 ![Blue Ocean Overcommit Logs](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Logs.png?raw=true "Blue Ocean Overcommit Logs")
 
-
-In each stage, a number of processes will execute. To
-
-wip...
 
 As Nitro grows, the answer to the question can vary. To get a full picture of our [Jenkin's pipeline](https://jenkins.io/doc/book/pipeline/), check out the `Jenkinsfile` located on the root of `nitro-web`. This file is written in [Groovy](http://groovy-lang.org/), a Java-syntax-compatible object-oriented programming language that was modeled off of features in Ruby. (There is even a [Groovy on Grails](https://grails.org/) Java framework that models `Ruby on Rails`).
