@@ -54,7 +54,7 @@ Here, one can see that the `Deploy` stage is skipped because the corresponding n
 
 ![Blue Ocean Bottom of PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Overview-in-Blue-Ocean.png?raw=true "Blue Ocean Bottom of PR Build")
 
-The "Overcommit" process is broken down into for sections of logs. On the far right of each line, you can see how long each section took. Reveiwing that image above shows that most of the work happened in a section simply titled "false". Clicking on that line of text will reveal even more info.
+The "Overcommit" process is broken down into sections of logs. On the far right of each line, you can see how long each section took. Reveiwing that image above shows that most of the work happened in a section simply titled "false". Clicking on that line of text will reveal even more info.
 
 ![Blue Ocean Overcommit Logs](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Overcommit-Logs.png?raw=true "Blue Ocean Overcommit Logs")
 
