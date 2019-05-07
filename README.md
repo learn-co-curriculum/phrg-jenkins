@@ -28,9 +28,9 @@ Continuous deployment is an excellent way to accelerate the feedback loop with y
 
 At Power, it is common to refer to Jenkins as our "CI", but "CI/CD" is a more complete description. Moving forward, these lessons will refer to Jenkins simply as Nitro's CI.
 
-Jenkins is integrated with Nitro through [Github Webhooks](https://help.github.com/articles/about-webhooks/), just like Codeclimate. Anytime one adds a commit to a pull request on the `nitro-web` repo, it triggers a CI run. Once Jenkins has finished, it displays the result of the run right in Github:
+Jenkins is integrated with Nitro through [Github Webhooks](https://help.github.com/articles/about-webhooks/). Anytime one adds a commit to a pull request on the `nitro-web` repo, it triggers a CI run. Once Jenkins has finished, it displays the result of the run right in Github:
 
-![Successful CI Run](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Green-CI-Run.png?raw=true "Successful CI Run")
+![Successful CI Run](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/GreenCIRun.png?raw=true "Successful CI Run")
 
 ### What does Jenkins do for Nitro?
 
