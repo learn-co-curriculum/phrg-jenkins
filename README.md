@@ -2,7 +2,7 @@
 
 ![Jenkins Logo](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Jenkins-Logo.png?raw=true "Jenkins Logo")
 
-[Jenkins](https://github.com/jenkinsci/jenkins) is an open source continuous integration, continuous deployment software that can be used to automate building, testing, and deploying software. Power uses it for all of these purposes, and it enables us to update Nitro continuously throughout the day.
+[Jenkins](https://github.com/jenkinsci/jenkins) is an open source continuous integration, continuous deployment software that can be used to automate building, testing, and deploying software. Power uses Jenkins for building and testing, and it enables us to update Nitro continuously throughout the day.
 
 ## Continuous Integration
 
@@ -24,9 +24,11 @@ Continuous Deployment (CD) takes this process one step further. [Sten Pittet con
 
 Continuous deployment is an excellent way to accelerate the feedback loop with your customers and take pressure off the team as there isn't a Release Day anymore. Developers can focus on building software, and they see their work go live minutes after they've finished working on it."
 
+Nitro used to use Jenkins for both CI & CD. Now we have a different tool that handles CD, called Milano. We will discuss Milano at a later time.
+
 ## Nitro
 
-At Power, it is common to refer to Jenkins as our "CI", but "CI/CD" is a more complete description. Moving forward, these lessons will refer to Jenkins simply as Nitro's CI.
+At Power, it is common to refer to Jenkins simply as CI. Moving forward, these lessons will refer to Jenkins simply as Nitro's CI.
 
 Jenkins is integrated with Nitro through [Github Webhooks](https://help.github.com/articles/about-webhooks/). Anytime one adds a commit to a pull request on the `nitro-web` repo, it triggers a CI run. Once Jenkins has finished, it displays the result of the run right in Github:
 
@@ -42,7 +44,7 @@ In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Clea
 
 ### Digging deeper with Blue Ocean
 
-Just looking at the stages themselves does not reveal much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. As you might guess, most of the views in Blue Ocean are blue :)
+Just looking at the stages themselves does not reveal much about what is going on. Happily, Jenkins has a plugin called [Blue Ocean](https://jenkins.io/projects/blueocean/) that renders a more communicative interface. As you might guess, most of the views in Blue Ocean are blue.
 
 ![Blue Ocean UI](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/Blue-Ocean-UI.png?raw=true "Blue Ocean UI")
 
