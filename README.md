@@ -24,8 +24,6 @@ Continuous Deployment (CD) takes this process one step further. [Sten Pittet con
 
 Continuous deployment is an excellent way to accelerate the feedback loop with your customers and take pressure off the team as there isn't a Release Day anymore. Developers can focus on building software, and they see their work go live minutes after they've finished working on it."
 
-Nitro used to use Jenkins for both CI & CD. In some of the following screen shots of Jenkins from 2018, you will see a "Deploy" stage. Power now uses a different tool to handle CD, called Milano. We will discuss Milano at a later time.
-
 ## Nitro
 
 At Power, it is common to refer to Jenkins simply as CI. Moving forward, these lessons will refer to Jenkins simply as Nitro's CI.
@@ -40,7 +38,7 @@ For a new commit on a `nitro-web` Pull Request, Jenkins will initialize Nitro's 
 
 ![PR Build](https://raw.githubusercontent.com/powerhome/phrg-jenkins/master/PR-9136-Old-Jenkins-UI.png?raw=true "PR Build")
 
-In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Cleanup` are called CI stages. For a **PR** build, the `Deploy` stage is skipped over. Only builds on `nitro-web`'s master branch will automatically deploy.
+In the screenshot above, `Env Init`, `Dependencies`, `Build`, `Deploy` and `Cleanup` are called CI stages. Nitro used to use Jenkins for both CI & CD, which is why there is a `Deploy` stage above. Power now uses a different tool to handle CD, called Milano. We will discuss Milano later.
 
 ### Digging deeper with Blue Ocean
 
