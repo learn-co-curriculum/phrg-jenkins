@@ -24,7 +24,7 @@ Continuous Deployment (CD) takes this process one step further. [Sten Pittet con
 
 Continuous deployment is an excellent way to accelerate the feedback loop with your customers and take pressure off the team as there isn't a Release Day anymore. Developers can focus on building software, and they see their work go live minutes after they've finished working on it."
 
-Nitro used to use Jenkins for both CI & CD. Now we have a different tool that handles CD, called Milano. We will discuss Milano at a later time.
+Nitro used to use Jenkins for both CI & CD. In some of the following screen shots of Jenkins from 2018, you will see a "Deploy" stage. Power now uses a different tool to handle CD, called Milano. We will discuss Milano at a later time.
 
 ## Nitro
 
